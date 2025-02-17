@@ -1,0 +1,21 @@
+{
+  "name": "metamask-clone",
+  "version": "1.0.0",
+  "description": "A MetaMask clone application with proper authentication flow",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build"
+  },
+  "dependencies": {
+    "@metamask/detect-provider": "^1.2.0",
+    "axios": "^0.21.1",
+    "ethers": "^5.4.0",
+    "vue": "^2.6.12",
+    "vue-router": "^3.2.0",
+    "@walletconnect/web3-provider": "^1.6.6"
+  },
+  "devDependencies": {
+    "@vue/cli-service": "^4.5.0",
+    "vue-template-compiler": "^2.6.12"
+  }
+}
